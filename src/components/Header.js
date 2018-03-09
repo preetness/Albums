@@ -12,19 +12,19 @@ const styles = {
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     elevation: 2,
-    position: 'relative '
+    position: 'relative'
   },
   textStyle: {
     fontSize: 20
   }
 };
 
-const Header = () => {
+const Header = props => {
   const { viewStyle, textStyle } = styles;
 
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Albums</Text>;
+      <Text style={textStyle}>{props.headerText}</Text>;
     </View>
   );
 };
